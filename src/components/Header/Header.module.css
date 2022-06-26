@@ -1,0 +1,30 @@
+.header{
+    background: hsl(0, 4%, 5%);
+}
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2px;
+}
+.header_menu_link {
+    font-weight: bold;
+    padding: 15px 15px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.header_menu_link:hover {
+    outline: 1px solid #E8C300;
+}
+.header_menu_link.active{
+    outline: 1px solid #E8C300;
+}

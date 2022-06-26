@@ -1,0 +1,127 @@
+.mainPage {
+    background: url('mainpage-bg.jpg') no-repeat center top/cover;
+    padding-bottom: 81px;
+}
+.content_inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 0;
+}
+.timeOfWork {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    color: #FFFFFF;
+    display: inline;
+    padding: 0;
+    font-size: 12px;
+    width: 60px;
+}
+.content_center {
+    text-align: center;
+    margin-top: 151px;
+}
+.content_suptitle {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+.content_title {
+    color: #FFFFFF;
+    font-size: 96px;
+    margin: 0;
+    font-family: 'Banny', sans-serif;
+    text-transform: uppercase;
+    margin-top: 14px ;
+    margin-bottom: 74px;
+}
+.content_btn_left {
+    padding: 28px 65px;
+    background:#E8C300;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-right: 40px;
+    display: inline-block;
+}
+.content_btn_right {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 29px 71px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background .4s;
+    display: inline-block;
+}
+.content_btn_right:hover {
+    background: #FFFFFF;
+    color: #E8C300;
+}
+.content_messages {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+}
+.content_messages_link {
+    width: 60px ;
+    height: 60px;
+    padding: auto;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background .1s;
+}
+.content_messages_link:hover {
+    background: #E8C300;
+}
+.content_message_icon {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 35%;
+}
+.content_button_inner {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: content-box;
+    margin: 82px auto 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.content_button_down {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.content_button_down:hover {
+    margin-top: 10px;
+}
+.content_button_down:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: 15px;
+    border: 5px solid #333333;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+}
