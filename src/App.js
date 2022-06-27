@@ -8,6 +8,7 @@ import Map from './components/Map/Map';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { Book } from './components/Book/Book';
 import MenuInner from './components/Menu/MenuInner';
+import Events from './components/Events/Events';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About/>}/>
             <Route path="/book" element={<Book/>}/>
             <Route path="/menu" element={<MenuInner/>}/>
+            <Route path="/events" element={<Events/>}/>
           </Routes>
       <GaleryContainer />
       <Map/>

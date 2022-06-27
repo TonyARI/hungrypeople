@@ -15,7 +15,7 @@ function Header() {
                         <img src={logo} alt=""/>
                     </div>
                     <NavLink to="/menu" className={navData=>navData.isActive?s.header_menu_link+" "+s.active:s.header_menu_link}>MENU</NavLink>
-                        <a className={s.header_menu_link}>EVENTS</a>
+                    <NavLink to="/events" className={navData=>navData.isActive?s.header_menu_link+" "+s.active:s.header_menu_link}>EVENTS</NavLink>
                         <a className={s.header_menu_link}>CONTACT</a>
                 </div>
             </div>
