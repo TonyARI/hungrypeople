@@ -1,5 +1,5 @@
 import sc from "../About/About.module.css"
-import s from "./Menu.module.css";
+import s from "../Menu/Menu.module.css";
 import specImg from '../image/speciaties.png';
 
 

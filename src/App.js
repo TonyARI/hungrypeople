@@ -7,8 +7,9 @@ import MainPage from './components/MainPage/MainPage';
 import Map from './components/Map/Map';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { Book } from './components/Book/Book';
-import MenuInner from './components/Menu/MenuInner';
+import MenuContainer from './components/Menu/MenuContainer';
 import Events from './components/Events/Events';
+import Specialties from './components/Specialties/Specialties';
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
             <Route path="/home" element={<MainPage/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/book" element={<Book/>}/>
-            <Route path="/menu" element={<MenuInner/>}/>
+            <Route path="/menu" element={<MenuContainer/>}/>
             <Route path="/events" element={<Events/>}/>
+            <Route path="/specialties" element={<Specialties/>}/>
           </Routes>
       <GaleryContainer />
       <Map/>

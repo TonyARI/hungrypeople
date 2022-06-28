@@ -16,7 +16,7 @@ function Header() {
                     </div>
                     <NavLink to="/menu" className={navData=>navData.isActive?s.header_menu_link+" "+s.active:s.header_menu_link}>MENU</NavLink>
                     <NavLink to="/events" className={navData=>navData.isActive?s.header_menu_link+" "+s.active:s.header_menu_link}>EVENTS</NavLink>
-                        <a className={s.header_menu_link}>CONTACT</a>
+                    <NavLink to="/specialties" className={navData=>navData.isActive?s.header_menu_link+" "+s.active:s.header_menu_link}>SPECIALTIES</NavLink>
                 </div>
             </div>
         </div>

@@ -10,7 +10,8 @@
 .form_inner {
     margin-right: 8%;
 }
-.title {
+.title,
+.check_data {
     font-size: 36px;
     line-height: 48px;
     font-family: 'Banny';
@@ -99,4 +100,51 @@
 
 .footer_text_bold{
     font-weight: bold;
+}
+
+.warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 0 15px;
+    background: rgb(181, 11, 11);
+    color: #000000;
+    z-index: 6;
+    text-align: center;
+}
+.checkValues_poopap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 1, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 2;
+}
+.checkValues {
+    z-index: 3;
+    background: #FFFFFF;
+    width: 40%;
+}
+.check_book,
+.check_cancel {
+    border: none;
+    color: #FFFFFF; 
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 25px 0;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #E8C300;
+    width: 50%;
+}
+.check_cancel {
+    background: #BBBBBB;
 }
