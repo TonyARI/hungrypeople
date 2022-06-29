@@ -1,0 +1,62 @@
+.window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 1, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.window.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.content {
+    background: white;
+    width: 40%;
+    z-index: 3;
+    transform: scale(0.5);
+    transition: 0.4s;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.content.active {
+    transform: scale(1);
+}
+
+
+.closeInner {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+}
+
+.close,
+.close2 {
+    position: absolute;
+    width: 6px;
+    height: 30px;
+    background: #E8C300;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 5;
+}
+.close2 {
+    transform: rotate(-45deg);
+} 

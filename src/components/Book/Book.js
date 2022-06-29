@@ -1,6 +1,8 @@
 import bookImg from '../image/book-img.png';
 import s from "./Book.module.css";
 import React from 'react';
+import Poopap from "../Poopap/Poopap";
+
 
 export function Book() {
     return(
@@ -24,7 +26,8 @@ export function Book() {
 
 
 export let Form=()=>{
-    const [values, setvalue]=React.useState({ data: {name: "", email: "", phone: "", people: "", date: "", time: ""}, showWarning: false, checkValues: false })
+    const [values, setvalue]=React.useState({ data: {name: "", email: "", phone: "", people: "", date: "", time: ""}, showWarning: false, checkValues: false, sucessfullyBooking: false })
+    const [modalActive2, setModalActive2]=React.useState(false)
     let changeValue=(e)=>{
         switch(e.target.name){
             case "name":{
@@ -62,15 +65,27 @@ export let Form=()=>{
             }
         }
         setvalue({...values, data: {...values.data}, checkValues: true})
-        console.log(values)
+        setModalActive2(true);
     }
+
+    let bookTable=()=>{
+        setvalue({...values, data: {...values.data, name: "", email: "", phone: "", people: "", date: "", time: "" }, checkValues: false, sucessfullyBooking: true})
+        setModalActive2(false);
+        setTimeout(()=>setvalue({...values, data: {...values.data, name: "", email: "", phone: "", people: "", date: "", time: "" }, checkValues: false, sucessfullyBooking: false}), 3000)
+    }
+
+    let cancel=()=>{
+        setvalue({...values, checkValues: false})
+    }
+  
     return(
     <>
     {values.showWarning&&<div className={s.warning}>Все поля формы должны быть заполнены!</div>}
+    {values.sucessfullyBooking&&<div className={s.success}>The table was booked successfully!</div>}
     <form action="phile.php">
-        {values.checkValues&&
-            <div className={s.checkValues_poopap}>
-                 <div className={s.checkValues}>
+        
+                <Poopap active={modalActive2} setactive={setModalActive2}>
+                <div className={s.checkValues}>
                     <h3 className={s.check_data}>Check the data</h3>
                     <p>Name: {values.data.name} </p>
                     <p>Email: {values.data.email}</p>
@@ -78,10 +93,12 @@ export let Form=()=>{
                     <p>Count of people: {values.data.people}</p>
                     <p>date: {values.data.date}</p>
                     <p>time: {values.data.time}</p>
-                    <button className={s.check_book}>Book table</button>
-                    <button className={s.check_cancel}>Cancel</button>
+                    <button onClick={(e)=>{e.preventDefault(); bookTable()}} className={s.check_book}>Book table</button>
+                    <button onClick={cancel} className={s.check_cancel}>Cancel</button>
                 </div>
-            </div>}
+                </Poopap>
+            
+            
         <div className={s.form_inner}>
             <h1 className={s.title+" "+ "yellow_strip"}>Book a table</h1>
             <div className={s.left_inputs}>

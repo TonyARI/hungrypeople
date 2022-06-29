@@ -102,7 +102,8 @@
     font-weight: bold;
 }
 
-.warning {
+.warning,
+.success {
     position: fixed;
     top: 0;
     left: 0;
@@ -147,4 +148,7 @@
 }
 .check_cancel {
     background: #BBBBBB;
+}
+.success {
+    background: rgb(16, 187, 16);
 }

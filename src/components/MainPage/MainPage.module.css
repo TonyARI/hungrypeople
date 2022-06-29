@@ -49,6 +49,7 @@
     color: #FFFFFF;
     margin-right: 40px;
     display: inline-block;
+    text-transform: uppercase;
 }
 .content_btn_right {
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -124,4 +125,10 @@
     border-top: none;
     transform: rotate(-45deg);
     border-radius: 2px;
+}
+.poopap_text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
 }
