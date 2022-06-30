@@ -132,3 +132,49 @@
     line-height: 24px;
     color: #000000;
 }
+
+@media(max-width: 916px) {
+    .content_inner {
+      display: block;
+      position: relative;
+    }
+    .content_messages {
+        margin: 20px auto;
+        text-align: center;
+        justify-content: space-between;
+        flex-direction: inherit;
+        width: 240px;
+    }
+    .content_messages--link {
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .content_messages--link:last-child {
+        margin-right: 0;
+    }
+    .timeOfWork {
+        writing-mode: horizontal-tb;
+        display: block;
+        width: 100%;
+        transform: rotate(0);
+        text-align: center;
+        margin-bottom: 60px;
+        position: absolute;
+        bottom: -250px;
+    }
+    .content_center {
+        margin-top: 0;
+    }
+    .titles {
+        padding: 151px 0 0;
+    }
+    .content_btn_left {
+       margin: 5%;
+    }
+}
+
+@media(max-width: 555px) {
+    .content_title  {
+        font-size: calc(30px + 10vw);
+      }
+}

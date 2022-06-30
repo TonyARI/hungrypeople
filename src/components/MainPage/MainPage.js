@@ -23,8 +23,10 @@ function MainPage() {
                     <div className={s.content_inner}>
                         <span className={s.timeOfWork}>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</span>
                         <div className={s.content_center}>
-                            <h2 className={s.content_suptitle}>RESTAURANT</h2>
-                            <h1 className={s.content_title}>hungry people</h1>
+                            <div className={s.titles}>
+                                <h2 className={s.content_suptitle}>RESTAURANT</h2>
+                                <h1 className={s.content_title}>hungry people</h1>
+                            </div>
                             <NavLink to="/book" className={s.content_btn_left}>Book table</NavLink>
                             <a className={s.content_btn_right} onClick={(e)=>{e.preventDefault(); setModalActive(true)}} href="">EXPLORE</a>
                         </div>

@@ -75,28 +75,30 @@ export let Form=()=>{
     }
 
     let cancel=()=>{
-        setvalue({...values, checkValues: false})
+        setvalue({...values, checkValues: false});
+        setModalActive2(false);
     }
   
     return(
     <>
     {values.showWarning&&<div className={s.warning}>Все поля формы должны быть заполнены!</div>}
     {values.sucessfullyBooking&&<div className={s.success}>The table was booked successfully!</div>}
+    <Poopap active={modalActive2} setactive={setModalActive2}>
+        <div className={s.checkValues}>
+            <h3 className={s.check_data+" "+"yellow_strip"}>Check the data</h3>
+            <p><b>Name:</b> {values.data.name} </p>
+            <p><b>Email:</b> {values.data.email}</p>
+            <p><b>Phone:</b> {values.data.phone}</p>
+            <p><b>Count of people:</b> {values.data.people}</p>
+            <p><b>date:</b> {values.data.date}</p>
+            <p><b>time:</b> {values.data.time}</p>
+            <button onClick={bookTable} className={s.check_book}>Book table</button>
+            <button onClick={cancel} className={s.check_cancel}>Cancel</button>
+        </div>
+    </Poopap>
     <form action="phile.php">
         
-                <Poopap active={modalActive2} setactive={setModalActive2}>
-                <div className={s.checkValues}>
-                    <h3 className={s.check_data}>Check the data</h3>
-                    <p>Name: {values.data.name} </p>
-                    <p>Email: {values.data.email}</p>
-                    <p>Phone: {values.data.phone}</p>
-                    <p>Count of people: {values.data.people}</p>
-                    <p>date: {values.data.date}</p>
-                    <p>time: {values.data.time}</p>
-                    <button onClick={(e)=>{e.preventDefault(); bookTable()}} className={s.check_book}>Book table</button>
-                    <button onClick={cancel} className={s.check_cancel}>Cancel</button>
-                </div>
-                </Poopap>
+              
             
             
         <div className={s.form_inner}>

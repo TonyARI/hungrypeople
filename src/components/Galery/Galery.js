@@ -63,14 +63,14 @@ function Galery(props) {
                             props.toggleActivePicture(item.photos, item.id, true);
                             return;
                         }
-                    })}  style={{zIndex: 3, display: "block"}} ></div>}
+                    })}  style={{zIndex: 20, display: "block"}} ></div>}
                         <img src={props.galery.galeryActivePicture} className={s.poopap_img}/>
                     {props.galery.idActivePicture<props.galery.items.length && <div className={s.picture_arrow+" "+s.right} onClick={()=>props.galery.items.map((item)=>{
                         if(item.id-props.galery.idActivePicture===1){
                             props.toggleActivePicture(item.photos, item.id, true);
                             return;
                         }
-                    })} style={{zIndex: 3, display: "block"}}></div>}
+                    })} style={{zIndex: 20, display: "block"}}></div>}
                       <div className={s.closeInner} onClick={()=>{props.toggleActivePicture(null, null, false); document.body.style.overflow="scroll"}}>
                         <span className={s.close}></span>
                         <span className={s.close2}></span> 
