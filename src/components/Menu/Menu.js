@@ -1,5 +1,6 @@
 import s from "./Menu.module.css";
 import React from "react";
+import sc from "../commonStyles.module.css";
 
 
 function Menu(props) {
@@ -25,10 +26,10 @@ function Menu(props) {
          <section className={s.menu} id="menu">
          <div className="container">
              <div className={s.header}>
-                 <h1 className={s.header_title+" "+"yellow_strip"}>
+                 <h1 className={sc.title+" "+"yellow_strip"}>
                      DELICIOUS MENU
                  </h1>
-                 <h2 className={s.header_suptitle}>
+                 <h2 className={sc.suptitle}>
                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
                  </h2>
              </div>

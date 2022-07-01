@@ -74,6 +74,7 @@
         flex-direction: column;
         height: 100vh;
         top: 0;
+        box-sizing: border-box;
         right: -150px;
         background: hsl(0, 4%, 5%); 
         z-index: 10;
@@ -81,6 +82,7 @@
     }
     .header_wrapper.active {
         right: 0;
+        padding: 2vh 0 4vh;
     }
     .window {
         position: fixed;

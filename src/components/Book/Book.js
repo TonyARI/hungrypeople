@@ -2,16 +2,19 @@ import bookImg from '../image/book-img.png';
 import s from "./Book.module.css";
 import React from 'react';
 import Poopap from "../Poopap/Poopap";
+import sc from "../commonStyles.module.css";
 
 
 export function Book() {
     return(
         <section className={s.book}>
             <div className="container">
-                <div className={s.inner}>
-                    <Form/>
-                    <div className={s.book_img}>
-                        <img className={s.book_image} src={bookImg} alt=""/>
+                <div className={sc.inner}>
+                    <div className={sc.text_content}>
+                        <Form/>
+                    </div>
+                    <div className={sc.img_inner}>
+                        <img className={sc.img} src={bookImg} alt=""/>
                     </div>
                 </div>
                 <div className={s.footer}>

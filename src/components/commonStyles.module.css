@@ -1,0 +1,117 @@
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 48px;
+    font-family: 'Banny';
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+}
+.suptitle {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+.text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.white_uppercase_title {
+    padding: 38px 0;
+    text-align: center;
+}
+.white_uppercase_title_text{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+/* Picture right */
+.img_inner,
+.img_inner_left {
+    max-width: 475px;
+    max-height: 475px;
+    position: relative;
+    width: 37vw;
+    height: 37vw;
+    margin-right: 12%;
+}
+
+.img_inner:before,
+.img_inner_left:before {
+    content: '';
+    position: absolute;
+    width: 52%;
+    height: 52%;
+    outline: 20px solid #E8C300;
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+    top: 26%;
+    right: -25%;
+}
+
+.text_content,
+.text_content_right {
+    text-align: center;
+    margin-right: 8%;
+    width: 46%;
+}
+
+.img {
+    max-width: 475px;
+    max-height: 475px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px #BBBBBB;
+}
+
+/* Picture Left */
+
+.img_inner_left {
+    margin-right: 0;
+    margin-left: 12%;
+}
+.img_inner_left:before{
+    left: -25%;
+    right: 0;
+}
+.text_content_right {
+    margin-right: 0;
+    margin-left: 8%;
+}
+
+@media(max-width: 750px) {
+    .inner {
+        flex-direction: column;
+    }
+    .text_content,
+    .text_content_right {
+        width: 95%;
+        margin-right: 0;
+    }
+    .text_content_right {
+        order: -1;
+        margin-left: 0;
+    }
+    .img_inner,
+    .img_inner_left {
+        margin: 5px auto;
+        width: 60vw;
+        height: 60vw;
+
+    }
+    .img_inner:before,
+    .img_inner_left:before {
+        display: none;
+    }
+}

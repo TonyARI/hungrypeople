@@ -1,21 +1,22 @@
 import rightImg from "../image/private_right.png";
 import leftImg from "../image/private_left.png";
 import s from "./Events.module.css";
+import sc from "../commonStyles.module.css";
 
 function Events() {
     return (
         <section className={s.private} id="events">
         <div className="container">
-            <div className={s.title_inner}>
-                <h1 className={s.title}>PRIVATE EVENTS</h1>
+            <div className={sc.white_uppercase_title}>
+                <h1 className={sc.white_uppercase_title_text}>PRIVATE EVENTS</h1>
             </div>   
-            <div className={s.content_inner}>
-                <div className={s.left_img}>
-                    <img className={s.left_img_icon} src={leftImg} alt=""/>
+            <div className={sc.inner+" "+s.inner}>
+                <div className={sc.img_inner_left+" "+s.img_inner}>
+                    <img className={sc.img} src={leftImg} alt=""/>
                     <span className={s.txt+" "+s.left}>weddings</span>
                 </div>
-                <div className={s.right_img}>
-                    <img className={s.right_img_icon} src={rightImg} alt=""/>
+                <div className={sc.img_inner+" "+s.img_inner}>
+                    <img className={sc.img} src={rightImg} alt=""/>
                     <span className={s.txt+" "+s.right}>corporate pzrties</span>
                 </div>
             </div>

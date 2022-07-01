@@ -8,7 +8,7 @@
     align-items: center;
 }
 .form_inner {
-    margin-right: 8%;
+    width: 100%;
 }
 .title,
 .check_data {
@@ -24,49 +24,26 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 .left_item {
-    width: 257px;
+    width: 265px;
     height: 60px;
     background: #E5E5E5;
     border-radius: 5px;
     border: none;
     padding: 0 20px;
+    box-sizing: border-box;
     color: rgba(51, 51, 51, 0.5);
     font-size: 14px;
     line-height: 19px;
 }
-
 .left_item:first-child {
     margin-right: 10px;
 }
 
-.book_img {
-    position: relative;
-    width: 37%;
-    margin-right: 12%;
-    max-height: 475px;
-}
-
-.book_image {
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 0 50px #BBBBBB;
-}
-
-.book_img:before {
-    content: '';
-    position: absolute;
-    width: 52%;
-    height: 52%;
-    outline: 20px solid #E8C300;
-    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
-    border-radius: 5px;
-    top: 26%;
-    right: -25%;
-}
 .select{
-    width: 290px;
+    box-sizing: border-box;
     padding: 0 20px;
     appearance: none;
     background-image: url("../image/arrow_book.png");
@@ -151,4 +128,24 @@
 }
 .success {
     background: rgb(16, 187, 16);
+}
+
+@media(max-width: 1241px) {
+    .form_inner {
+        margin-left: 15px;
+    }
+    .left_item {
+        width: 100%;
+    }
+    .left_item:first-child {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 750px) {
+    .form_inner {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
