@@ -71,7 +71,7 @@ function Galery(props) {
                             return;
                         }
                     })} style={{zIndex: 20, display: "block"}}></div>}
-                      <div className={s.closeInner} onClick={()=>{props.toggleActivePicture(null, null, false); document.body.style.overflow="scroll"}}>
+                      <div className={s.closeInner} onClick={()=>{props.toggleActivePicture(null, null, false); document.body.style.overflowY="scroll"}}>
                         <span className={s.close}></span>
                         <span className={s.close2}></span> 
                       </div>

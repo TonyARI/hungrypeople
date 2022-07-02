@@ -84,8 +84,8 @@ export let Form=()=>{
   
     return(
     <>
-    {values.showWarning&&<div className={s.warning}>Все поля формы должны быть заполнены!</div>}
-    {values.sucessfullyBooking&&<div className={s.success}>The table was booked successfully!</div>}
+    {values.showWarning&&<div className={s.warning+" "+sc.text}>all fields must be filled!</div>}
+    {values.sucessfullyBooking&&<div className={s.success+" "+sc.text}>The table was booked successfully!</div>}
     <Poopap active={modalActive2} setactive={setModalActive2}>
         <div className={s.checkValues}>
             <h3 className={s.check_data+" "+"yellow_strip"}>Check the data</h3>

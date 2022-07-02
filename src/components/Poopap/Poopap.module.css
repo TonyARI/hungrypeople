@@ -31,6 +31,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-radius: 5px;
 }
 .content.active {
     transform: scale(1);
@@ -60,3 +61,15 @@
 .close2 {
     transform: rotate(-45deg);
 } 
+
+@media(max-width: 1000px) {
+    .content {
+        width: 60%;
+    }
+}
+
+@media(max-width: 400px) {
+    .content {
+        width: 75%;
+    }
+}

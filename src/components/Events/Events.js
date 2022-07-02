@@ -12,11 +12,11 @@ function Events() {
             </div>   
             <div className={sc.inner+" "+s.inner}>
                 <div className={sc.img_inner_left+" "+s.img_inner}>
-                    <img className={sc.img} src={leftImg} alt=""/>
+                    <img className={sc.img} style={{boxShadow: "none"}} src={leftImg} alt=""/>
                     <span className={s.txt+" "+s.left}>weddings</span>
                 </div>
                 <div className={sc.img_inner+" "+s.img_inner}>
-                    <img className={sc.img} src={rightImg} alt=""/>
+                    <img className={sc.img} style={{boxShadow: "none"}} src={rightImg} alt=""/>
                     <span className={s.txt+" "+s.right}>corporate pzrties</span>
                 </div>
             </div>
