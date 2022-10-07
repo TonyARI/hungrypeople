@@ -21,7 +21,7 @@ function Menu(props) {
                              </div>
                            );
     }
-
+    
      return (
          <section className={s.menu} id="menu">
          <div className="container">

@@ -74,7 +74,7 @@ export let Form=()=>{
     let bookTable=()=>{
         setvalue({...values, data: {...values.data, name: "", email: "", phone: "", people: "", date: "", time: "" }, checkValues: false, sucessfullyBooking: true})
         setModalActive2(false);
-        setTimeout(()=>setvalue({...values, data: {...values.data, name: "", email: "", phone: "", people: "", date: "", time: "" }, checkValues: false, sucessfullyBooking: false}), 3000)
+        setTimeout(()=>setvalue({...values, data: {...values.data, name: "", email: "", phone: "", people: "", date: "", time: "" }, checkValues: false, sucessfullyBooking: false}), 3000) 
     }
 
     let cancel=()=>{
